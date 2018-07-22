@@ -23,10 +23,12 @@
         </df>
       </df>
       <df name="include">
+        <in>ColorQuantization.h</in>
       </df>
       <df name="install">
       </df>
       <df name="src">
+        <in>ColorQuantization.cpp</in>
         <in>main.cpp</in>
       </df>
     </df>
@@ -68,8 +70,12 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" $HOME/</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" $HOME/Pictures/</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" $HOME/Pictures/SC-Freiburg_Logo-neu.svg.png</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" $HOME/Pictures/baby-loewe.jpg</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <runcommand>"${OUTPUT_PATH}" $HOME/Pictures/baby-loewe.jpg</runcommand>
         <rundir>.</rundir>
         <buildfirst>false</buildfirst>
         <terminal-type>0</terminal-type>
