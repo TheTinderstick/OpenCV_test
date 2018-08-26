@@ -34,7 +34,7 @@ set(CMAKE_C_FLAGS_RELEASE        "-O3 -DNDEBUG")
 set(CMAKE_C_FLAGS_RELWITHDEBINFO "-O2 -g")
 
 set(CMAKE_CXX_COMPILER             "/usr/bin/clang++")
-set(CMAKE_CXX_FLAGS                "-Wall")
+set(CMAKE_CXX_FLAGS                "-Wall -std=c++2a")
 set(CMAKE_CXX_FLAGS_DEBUG          "-g")
 set(CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
 set(CMAKE_CXX_FLAGS_RELEASE        "-O3 -DNDEBUG")
@@ -42,4 +42,5 @@ set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
 
 set(_CMAKE_TOOLCHAIN_PREFIX "llvm-")
 
-
+set(CMAKE_CXX_CLANG_TIDY 
+    "clang-tidy;-checks=*,-fuchsia*" )

@@ -7,6 +7,23 @@
         <in>main.cpp</in>
       </df>
     </df>
+    <logicalFolder name="src"
+                   displayName="src"
+                   projectFiles="true"
+                   root="/mnt/RaspiYocto/potrace/potrace/src">
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/auxiliary.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/bitmap.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/curve.c</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/curve.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/decompose.c</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/decompose.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/lists.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/potracelib.c</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/potracelib.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/progress.h</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/trace.c</itemPath>
+      <itemPath>/mnt/RaspiYocto/potrace/potrace/src/trace.h</itemPath>
+    </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false"
@@ -29,7 +46,8 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-O3"/>
+        <element flagsID="0" commonFlags="-std=c++2a -O3"/>
+        <element flagsID="1" commonFlags="-std=c99"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -57,6 +75,8 @@
               <pElem>../OpenCV/src/opencv/modules/calib3d/include</pElem>
               <pElem>../OpenCV/src/opencv/modules/stitching/include</pElem>
               <pElem>include</pElem>
+              <pElem>../GSL/include</pElem>
+              <pElem>/mnt/RaspiYocto/potrace/install/include</pElem>
               <pElem>build/src</pElem>
             </incDir>
             <preprocessorList>
@@ -70,11 +90,52 @@
           <preBuildFirst>true</preBuildFirst>
         </preBuild>
       </makefileType>
-      <item path="src/ColorQuantization.cpp" ex="false" tool="1" flavor2="0">
+      <item path="/mnt/RaspiYocto/potrace/potrace/src/curve.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/mnt/RaspiYocto/potrace/potrace/src</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/mnt/RaspiYocto/potrace/potrace/src/decompose.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/lib/llvm-6.0/lib/clang/6.0.0/include</pElem>
+            <pElem>/mnt/RaspiYocto/potrace/potrace/src</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/mnt/RaspiYocto/potrace/potrace/src/potracelib.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/mnt/RaspiYocto/potrace/potrace/src</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/mnt/RaspiYocto/potrace/potrace/src/trace.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/mnt/RaspiYocto/potrace/potrace/src</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/ColorQuantization.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
